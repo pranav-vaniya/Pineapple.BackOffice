@@ -1,8 +1,3 @@
-# blank
+# Pineapple.BackOffice
 
-blank
-
-## Attributes
-
-- **Database**: mongodb
-- **Storage Adapter**: localDisk
+Pineapple.BackOffice
