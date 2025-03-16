@@ -14,7 +14,7 @@ export const Users: CollectionConfig = {
   slug: 'users',
   admin: {
     useAsTitle: 'username',
-    defaultColumns: ['firstName', 'lastName', 'role', 'username', 'createdBy'],
+    defaultColumns: ['firstName', 'lastName', 'role', 'reportsTo', 'createdBy'],
   },
   auth: {
     loginWithUsername: {
@@ -45,12 +45,19 @@ export const Users: CollectionConfig = {
       })),
       required: true,
     },
+    {
+      name: 'reportsTo',
+      label: 'Reports To',
+      type: 'relationship',
+      relationTo: 'users',
+      required: false,
+    },
     createdBy,
     modifiedBy,
   ],
   access: {
     create: SuperAdminOrClientAdmin,
-    read: SuperAdminOrCreatedByOrSelf,
+    read: () => true,
     update: SuperAdminOrCreatedBy,
     delete: SuperAdminOrCreatedBy,
   },

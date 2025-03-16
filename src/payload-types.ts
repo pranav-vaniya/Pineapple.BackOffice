@@ -121,6 +121,7 @@ export interface User {
   firstName: string;
   lastName?: string | null;
   role: 'Sales Representative' | 'Manager' | 'Client Administrator' | 'Super Administrator';
+  reportsTo?: (number | null) | User;
   createdBy?: (number | null) | User;
   modifiedBy?: (number | null) | User;
   updatedAt: string;
@@ -242,6 +243,7 @@ export interface UsersSelect<T extends boolean = true> {
   firstName?: T;
   lastName?: T;
   role?: T;
+  reportsTo?: T;
   createdBy?: T;
   modifiedBy?: T;
   updatedAt?: T;
