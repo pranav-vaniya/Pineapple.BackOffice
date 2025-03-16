@@ -20,3 +20,14 @@ export const SuperAdminOrCreatedByOrSelf: Access = ({ req: { user } }) => {
   }
   return conditions
 }
+
+export const SuperAdminOrSalesRep: Access = ({ req: { user } }) => {
+  if (!user) return false
+  return user.role === UserRoles.SuperAdmin || user.role === UserRoles.SalesRep
+}
+
+export const SuperAdminOrClientAdminOrCreatedBy: Access = ({ req: { user } }) => {
+  if (!user) return false
+  if (user.role === UserRoles.SuperAdmin || user.role === UserRoles.ClientAdmin) return true
+  return { createdBy: { equals: user.id } }
+}
