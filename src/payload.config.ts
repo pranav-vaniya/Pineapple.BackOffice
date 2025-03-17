@@ -33,4 +33,5 @@ export default buildConfig({
   }),
   sharp,
   plugins: [payloadCloudPlugin()],
+  cors: '*',
 })

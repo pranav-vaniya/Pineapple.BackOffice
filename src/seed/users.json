@@ -1,0 +1,250 @@
+{
+  "superAdminsJson": [
+    {
+      "username": "superadmin1",
+      "password": "pass",
+      "firstName": "Myrtle",
+      "lastName": "Ryan",
+      "role": "Super Administrator",
+      "reportsTo": null,
+      "createdBy": null,
+      "modifiedBy": null
+    },
+    {
+      "username": "superadmin2",
+      "password": "pass",
+      "firstName": "Mona",
+      "lastName": "Hayden",
+      "role": "Super Administrator",
+      "reportsTo": null,
+      "createdBy": null,
+      "modifiedBy": null
+    }
+  ],
+  "clientAdminsJson": [
+    {
+      "username": "clientadmin1",
+      "password": "pass",
+      "firstName": "Tonia",
+      "lastName": "Shaffer",
+      "role": "Client Administrator",
+      "reportsTo": null,
+      "createdBy": 0,
+      "modifiedBy": 0
+    },
+    {
+      "username": "clientadmin2",
+      "password": "pass",
+      "firstName": "Blevins",
+      "lastName": "Blevins",
+      "role": "Client Administrator",
+      "reportsTo": null,
+      "createdBy": 0,
+      "modifiedBy": 0
+    }
+  ],
+  "managersJson": [
+    {
+      "username": "manager1",
+      "password": "pass",
+      "firstName": "Lowe",
+      "lastName": "Holder",
+      "role": "Manager",
+      "reportsTo": null,
+      "createdBy": 0,
+      "modifiedBy": 0
+    },
+    {
+      "username": "manager2",
+      "password": "pass",
+      "firstName": "Vinson",
+      "lastName": "Hill",
+      "role": "Manager",
+      "reportsTo": null,
+      "createdBy": 0,
+      "modifiedBy": 0
+    },
+    {
+      "username": "manager3",
+      "password": "pass",
+      "firstName": "Castillo",
+      "lastName": "Scott",
+      "role": "Manager",
+      "reportsTo": null,
+      "createdBy": 0,
+      "modifiedBy": 0
+    },
+    {
+      "username": "manager4",
+      "password": "pass",
+      "firstName": "Sue",
+      "lastName": "Ramsey",
+      "role": "Manager",
+      "reportsTo": null,
+      "createdBy": 0,
+      "modifiedBy": 0
+    }
+  ],
+  "salesRepsJson": [
+    {
+      "username": "salesrep1",
+      "password": "pass",
+      "firstName": "Shannon",
+      "lastName": "Mckay",
+      "role": "Sales Representative",
+      "reportsTo": 0,
+      "createdBy": 0,
+      "modifiedBy": 0
+    },
+    {
+      "username": "salesrep2",
+      "password": "pass",
+      "firstName": "Latisha",
+      "lastName": "Cleveland",
+      "role": "Sales Representative",
+      "reportsTo": 0,
+      "createdBy": 0,
+      "modifiedBy": 0
+    },
+    {
+      "username": "salesrep3",
+      "password": "pass",
+      "firstName": "Blanca",
+      "lastName": "Clemons",
+      "role": "Sales Representative",
+      "reportsTo": 0,
+      "createdBy": 0,
+      "modifiedBy": 0
+    },
+    {
+      "username": "salesrep4",
+      "password": "pass",
+      "firstName": "Velez",
+      "lastName": "Hoover",
+      "role": "Sales Representative",
+      "reportsTo": 0,
+      "createdBy": 0,
+      "modifiedBy": 0
+    },
+    {
+      "username": "salesrep5",
+      "password": "pass",
+      "firstName": "Brenda",
+      "lastName": "Morse",
+      "role": "Sales Representative",
+      "reportsTo": 0,
+      "createdBy": 0,
+      "modifiedBy": 0
+    },
+    {
+      "username": "salesrep6",
+      "password": "pass",
+      "firstName": "Francis",
+      "lastName": "Parsons",
+      "role": "Sales Representative",
+      "reportsTo": 0,
+      "createdBy": 0,
+      "modifiedBy": 0
+    },
+    {
+      "username": "salesrep7",
+      "password": "pass",
+      "firstName": "Massey",
+      "lastName": "Sheppard",
+      "role": "Sales Representative",
+      "reportsTo": 0,
+      "createdBy": 0,
+      "modifiedBy": 0
+    },
+    {
+      "username": "salesrep8",
+      "password": "pass",
+      "firstName": "English",
+      "lastName": "Spence",
+      "role": "Sales Representative",
+      "reportsTo": 0,
+      "createdBy": 0,
+      "modifiedBy": 0
+    },
+    {
+      "username": "salesrep9",
+      "password": "pass",
+      "firstName": "Frazier",
+      "lastName": "Mullins",
+      "role": "Sales Representative",
+      "reportsTo": 0,
+      "createdBy": 0,
+      "modifiedBy": 0
+    },
+    {
+      "username": "salesrep10",
+      "password": "pass",
+      "firstName": "Clay",
+      "lastName": "Bond",
+      "role": "Sales Representative",
+      "reportsTo": 0,
+      "createdBy": 0,
+      "modifiedBy": 0
+    },
+    {
+      "username": "salesrep11",
+      "password": "pass",
+      "firstName": "Bowers",
+      "lastName": "Mcintyre",
+      "role": "Sales Representative",
+      "reportsTo": 0,
+      "createdBy": 0,
+      "modifiedBy": 0
+    },
+    {
+      "username": "salesrep12",
+      "password": "pass",
+      "firstName": "Norris",
+      "lastName": "Curtis",
+      "role": "Sales Representative",
+      "reportsTo": 0,
+      "createdBy": 0,
+      "modifiedBy": 0
+    },
+    {
+      "username": "salesrep13",
+      "password": "pass",
+      "firstName": "Lindsey",
+      "lastName": "Hood",
+      "role": "Sales Representative",
+      "reportsTo": 0,
+      "createdBy": 0,
+      "modifiedBy": 0
+    },
+    {
+      "username": "salesrep14",
+      "password": "pass",
+      "firstName": "Marquez",
+      "lastName": "Joseph",
+      "role": "Sales Representative",
+      "reportsTo": 0,
+      "createdBy": 0,
+      "modifiedBy": 0
+    },
+    {
+      "username": "salesrep15",
+      "password": "pass",
+      "firstName": "Conway",
+      "lastName": "Adkins",
+      "role": "Sales Representative",
+      "reportsTo": 0,
+      "createdBy": 0,
+      "modifiedBy": 0
+    },
+    {
+      "username": "salesrep16",
+      "password": "pass",
+      "firstName": "Sara",
+      "lastName": "Hays",
+      "role": "Sales Representative",
+      "reportsTo": 0,
+      "createdBy": 0,
+      "modifiedBy": 0
+    }
+  ]
+}
