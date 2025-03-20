@@ -2,6 +2,7 @@ import { getPayload } from 'payload'
 import config from '@payload-config'
 import { LeadSources, LeadStatuses, UserRoles } from '@/helpers/utils'
 import { superAdminsJson, clientAdminsJson, managersJson, salesRepsJson } from './users.json'
+import { superAdminNotes, clientAdminNotes, managerNotes, salesRepNotes } from './notes.json'
 
 // this line may show the following warning
 // Module '"/home/node/Projects/PayloadProjects/Pineapple.BackOffice/src/seed/leads"' has no exported member 'leadsJson'.
@@ -14,8 +15,10 @@ console.log('\nStarted seeding ...\n')
 async function seed() {
   try {
     var i = null
+    var j = null
     var data = null
     var userid = null
+    var note: string[] = []
 
     // insert super admins
     var jsonLength = superAdminsJson.length
@@ -45,6 +48,7 @@ async function seed() {
       await payload.find({
         collection: 'users',
         where: { role: { equals: UserRoles.SuperAdmin } },
+        limit: 10000,
       })
     ).docs.map((user) => user.id)
 
@@ -80,6 +84,7 @@ async function seed() {
       await payload.find({
         collection: 'users',
         where: { role: { equals: UserRoles.ClientAdmin } },
+        limit: 10000,
       })
     ).docs.map((user) => user.id)
 
@@ -115,6 +120,7 @@ async function seed() {
       await payload.find({
         collection: 'users',
         where: { role: { equals: UserRoles.Manager } },
+        limit: 10000,
       })
     ).docs.map((user) => user.id)
 
@@ -151,6 +157,7 @@ async function seed() {
       await payload.find({
         collection: 'users',
         where: { role: { equals: UserRoles.SalesRep } },
+        limit: 10000,
       })
     ).docs.map((user) => user.id)
 
@@ -180,6 +187,56 @@ async function seed() {
 
       console.log(`Added Lead (${i + 1}/${jsonLength}): ${data.firstName} ${data.lastName}`)
     }
+
+    // seed notes
+    const allUsers = (
+      await payload.find({
+        collection: 'users',
+        limit: 10000,
+      })
+    ).docs
+
+    const getRandomSuperAdminNote = () => {
+      return superAdminNotes[Math.floor(Math.random() * superAdminNotes.length)]
+    }
+
+    const getRandomClientAdminNote = () => {
+      return clientAdminNotes[Math.floor(Math.random() * clientAdminNotes.length)]
+    }
+
+    const getRandomManagerNote = () => {
+      return managerNotes[Math.floor(Math.random() * managerNotes.length)]
+    }
+
+    const getRandomSalesRepNote = () => {
+      return salesRepNotes[Math.floor(Math.random() * salesRepNotes.length)]
+    }
+
+    for (const user of allUsers) {
+      data = {
+        title: '',
+        note: '',
+        createdBy: user.id,
+        modifiedBy: user.id,
+      }
+
+      for (i = 0; i < 8; i++) {
+        if (user.role === UserRoles.SuperAdmin) note = getRandomSuperAdminNote()
+        else if (user.role === UserRoles.ClientAdmin) note = getRandomClientAdminNote()
+        else if (user.role === UserRoles.Manager) note = getRandomManagerNote()
+        else if (user.role === UserRoles.SalesRep) note = getRandomSalesRepNote()
+
+        data.title = note[0]
+        data.note = note[1]
+
+        await payload.create({
+          collection: 'notes',
+          data: data,
+        })
+      }
+
+      console.log(`Added Notes for ${user.username}`)
+    }
   } catch (error) {
     console.error(JSON.stringify(error))
     process.exit(0)
@@ -189,3 +246,5 @@ async function seed() {
 }
 
 await seed()
+
+console.log('\nFinished seeding ...\n')

@@ -2,6 +2,7 @@ export const CollectionSlugs = {
   Users: 'users',
   Media: 'media',
   Leads: 'leads',
+  Notes: 'notes',
 }
 
 export enum UserRoles {

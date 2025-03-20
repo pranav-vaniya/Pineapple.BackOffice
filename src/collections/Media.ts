@@ -1,7 +1,8 @@
+import { CollectionSlugs } from '@/helpers/utils'
 import type { CollectionConfig } from 'payload'
 
 export const Media: CollectionConfig = {
-  slug: 'media',
+  slug: CollectionSlugs.Media,
   fields: [
     {
       name: 'alt',

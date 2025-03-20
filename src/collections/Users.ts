@@ -5,13 +5,13 @@ import {
   SuperAdminOrCreatedBy,
   SuperAdminOrCreatedByOrSelf,
 } from '@/helpers/accessControl'
-import { UserRoles } from '@/helpers/utils'
+import { CollectionSlugs, UserRoles } from '@/helpers/utils'
 import { addCreatedBy } from '@/hooks/addCreatedBy'
 import { updateModifiedBy } from '@/hooks/updateModifiedBy'
 import type { CollectionConfig } from 'payload'
 
 export const Users: CollectionConfig = {
-  slug: 'users',
+  slug: CollectionSlugs.Users,
   admin: {
     useAsTitle: 'username',
     defaultColumns: ['firstName', 'lastName', 'role', 'reportsTo', 'createdBy'],
