@@ -180,6 +180,16 @@ async function seed() {
       data.modifiedBy = userid
       data.assignedTo = userid
 
+      data = {
+        ...data,
+        source: data.source as 'Referral' | 'Social Media' | 'Website' | 'Event' | 'Advertisement',
+      }
+
+      data = {
+        ...data,
+        status: data.status as 'New' | 'Contacted' | 'Follow Up' | 'Converted' | 'Lost',
+      }
+
       await payload.create({
         collection: 'leads',
         data: data,
