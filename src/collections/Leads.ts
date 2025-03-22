@@ -2,7 +2,7 @@ import { createdBy } from '@/fields/createdBy'
 import { modifiedBy } from '@/fields/modifiedBy'
 import {
   SuperAdminOrClientAdmin,
-  SuperAdminOrClientAdminOrCreatedBy,
+  SuperAdminOrClientAdminOrManagerOrCreatedBy,
   SuperAdminOrCreatedBy,
   SuperAdminOrSalesRep,
 } from '@/helpers/accessControl'
@@ -86,7 +86,7 @@ export const Leads: CollectionConfig = {
   ],
   access: {
     create: SuperAdminOrSalesRep,
-    read: SuperAdminOrClientAdminOrCreatedBy,
+    read: SuperAdminOrClientAdminOrManagerOrCreatedBy,
     update: SuperAdminOrCreatedBy,
     delete: SuperAdminOrClientAdmin,
   },
